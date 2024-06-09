@@ -1,0 +1,655 @@
+@import url("https://fonts.googleapis.com/css2?family=Alata&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap");
+
+:root {
+  --White: hsl(0, 0%, 100%);
+  --Black: hsl(0, 0%, 0%);
+  --Dark-Gray: hsl(0, 0%, 55%);
+  --Very-DarkGray: hsl(0, 0%, 41%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Alata", sans-serif;
+}
+
+body {
+  max-width: 100%;
+  min-height: 100vh;
+}
+
+.container {
+  width: 100%;
+  display: grid;
+  grid-template-rows: 4 1fr;
+  gap: 100px;
+}
+
+.firstSection {
+  width: 100%;
+  height: 80vh;
+  background-image: url(images/desktop/image-hero.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 50px 120px;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  position: relative;
+}
+
+.firstSection header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.firstSection header nav .menus {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+header .menus li {
+  list-style-type: none;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+header .menus li a {
+  color: var(--White);
+  text-decoration: none;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.4s;
+}
+
+header .menus li a::after {
+  content: "";
+  height: 2px;
+  width: 50%;
+  background-color: var(--White);
+  display: block;
+  position: absolute;
+  left: 12px;
+  bottom: -6px;
+  opacity: 0;
+  transition: all 0.2s;
+}
+
+header .menus li a:hover::after {
+  opacity: 1;
+}
+
+.firstSection .hero-text {
+  width: 50%;
+  height: auto;
+  padding: 20px;
+  border: 2px solid var(--White);
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 3rem;
+  font-weight: 200;
+  line-height: 3rem;
+  text-transform: uppercase;
+  color: var(--White);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.firstSection header nav .hamburger-menu {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: none;
+}
+
+.firstSection header nav .hamburger-menu img {
+  height: 20px;
+  width: 30px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.mobile-menu {
+  overflow: hidden;
+  position: absolute;
+  background: var(--Black);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 150px;
+  padding: 40px;
+  right: 0;
+  left: 0;
+  top: -100%;
+  bottom: 0;
+  transition: all 0.4s ease-in;
+  z-index: 100;
+}
+
+.mobile-menu.active {
+  top: 0;
+}
+
+.mobile-menu .mobile-bloc {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mobile-menu .mobile-bloc .menu-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.mobile-menu .mobile-bloc .menu-btn img {
+  height: 25px;
+  width: 25px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.mobile-menu .mobile-menus {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.mobile-menu .mobile-menus li {
+  font-size: 2.5rem;
+  font-weight: 100;
+  list-style: none;
+  text-transform: uppercase;
+}
+
+.mobile-menu .mobile-menus li a {
+  font-family: "Josefin Sans", sans-serif;
+  text-decoration: none;
+  color: var(--White);
+}
+
+.secondSection {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 0 150px;
+  position: relative;
+}
+
+.secondSection div {
+  width: 100%;
+}
+
+.secondSection div img {
+  max-width: 600px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.secondSection .description {
+  width: 450px;
+  height: 300px;
+  background: var(--White);
+  color: var(--Black);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  padding: 50px;
+  position: absolute;
+  top: 40%;
+  right: 16%;
+}
+
+.secondSection .description h1 {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 2rem;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.secondSection .description p {
+  font-size: 0.9rem;
+  font-weight: 200;
+  color: var(--Dark-Gray);
+}
+
+.thirdSection {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 0 150px;
+}
+
+.thirdSection .elm1 {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--White);
+}
+
+.thirdSection .elm1 h1 {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 2rem;
+  font-weight: 250;
+  text-transform: uppercase;
+  color: var(--Black);
+}
+
+.thirdSection .elm1 a {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 250;
+  text-transform: uppercase;
+  color: var(--White);
+  background-color: var(--Black);
+  padding: 10px;
+  text-decoration: none;
+}
+
+.thirdSection .grid {
+  width: 100%;
+  margin: 50px 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.thirdSection .grid div {
+  position: relative;
+  max-width: 100%;
+  height: 400px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+}
+
+.thirdSection .grid div .image {
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.thirdSection .grid div .card-body {
+  padding: 40px;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0%;
+  right: 0;
+  background: rgba(230, 215, 186, 0.4);
+  opacity: 0;
+  transition: all 0.4s ease-in-out;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+}
+
+.thirdSection .grid div .card-body p {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 2rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: var(--White);
+}
+
+.thirdSection .grid div:hover .card-body {
+  opacity: 1;
+}
+
+.thirdSection .grid div:hover .card-body p {
+  color: var(--Black);
+}
+
+.thirdSection .grid div .image1 {
+  background-image: url(images/desktop/image-deep-earth.jpg);
+}
+
+.thirdSection .grid div .image2 {
+  background-image: url(images/desktop/image-night-arcade.jpg);
+}
+
+.thirdSection .grid div .image3 {
+  background-image: url(images/desktop/image-soccer-team.jpg);
+}
+
+.thirdSection .grid div .image4 {
+  background-image: url(images/desktop/image-grid.jpg);
+}
+
+.thirdSection .grid div .image5 {
+  background-image: url(images/desktop/image-from-above.jpg);
+}
+
+.thirdSection .grid div .image6 {
+  background-image: url(images/desktop/image-pocket-borealis.jpg);
+}
+
+.thirdSection .grid div .image7 {
+  background-image: url(images/desktop/image-curiosity.jpg);
+}
+
+.thirdSection .grid div .image8 {
+  background-image: url(images/desktop/image-fisheye.jpg);
+}
+
+footer {
+  width: 100%;
+  background-color: var(--Black);
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  justify-content: center;
+  padding: 30px 120px;
+}
+
+footer .bloc1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+footer .bloc1 .logo-footer {
+  height: 1.3rem;
+}
+
+footer .bloc1 ul {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+footer .bloc1 ul li {
+  list-style-type: none;
+}
+
+footer .bloc1 ul li a {
+  text-decoration: none;
+}
+
+footer .bloc1 ul li a {
+  text-decoration: none;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.4s;
+}
+
+footer .bloc1 ul li a::after {
+  content: "";
+  height: 2px;
+  width: 100%;
+  background-color: var(--White);
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  opacity: 0;
+  transition: all 0.2s;
+}
+
+footer .bloc1 ul li a:hover:after {
+  opacity: 1;
+}
+
+footer .bloc1 ul li a img {
+  height: 1rem;
+}
+
+footer .bloc2 {
+  color: var(--White);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+footer .bloc2 .social-medias {
+  display: flex;
+  gap: 15px;
+}
+
+footer .bloc2 .social-medias li {
+  position: relative;
+  transition: all 0.4s;
+}
+
+footer .bloc2 .social-medias li::after {
+  content: "";
+  height: 2px;
+  width: 100%;
+  background-color: var(--White);
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  opacity: 0;
+  transition: all 0.2s;
+}
+
+footer .bloc2 .social-medias li:hover:after {
+  opacity: 1;
+}
+
+footer .bloc2 .social-medias li {
+  list-style-type: none;
+  cursor: pointer;
+}
+
+footer .bloc2 span {
+  font-size: 1rem;
+  font-weight: 100;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.attribution {
+  font-size: 0.8rem;
+  font-weight: 100;
+  font-family: "Josefin Sans", sans-serif;
+  color: var(--White);
+}
+
+.attribution a {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 400;
+  text-decoration: none;
+  color: var(--White);
+  position: relative;
+  transition: all 0.4s;
+}
+
+.attribution a::after {
+  content: "";
+  height: 1px;
+  width: 100%;
+  background-color: var(--White);
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  opacity: 0;
+  transition: all 0.2s;
+}
+
+.attribution a:hover::after {
+  opacity: 1;
+}
+
+@media only screen and (max-width: 1000px) {
+  .container {
+    gap: 10px;
+    text-align: center;
+  }
+
+  .firstSection {
+    width: 100%;
+    height: 100vh;
+    background-image: url(images/mobile/image-hero.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 0 20px;
+  }
+
+  .firstSection header {
+    padding: 20px;
+  }
+
+  .firstSection header nav .menus {
+    display: none;
+  }
+
+  .firstSection .hero-text {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto 0;
+    height: 40%;
+  }
+
+  .firstSection header nav .hamburger-menu {
+    display: block;
+  }
+
+  .secondSection {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0;
+  }
+
+  .secondSection div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+
+  .secondSection div img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .secondSection .description {
+    width: 100%;
+    position: relative;
+    padding: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    gap: 10px;
+  }
+
+  .thirdSection {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 0 20px;
+  }
+
+  .thirdSection div .elm1 {
+    justify-content: center;
+  }
+
+  .thirdSection div .grid {
+    max-width: 100%;
+    height: auto;
+    position: relative;
+    grid-template-columns: 1fr;
+  }
+
+  .thirdSection div .grid div {
+    width: 100%;
+    height: 200px;
+  }
+
+  .thirdSection .grid div .image {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .thirdSection .grid div .card-body p {
+    font-size: 1.5rem;
+    font-weight: 300;
+  }
+
+  .thirdSection .grid div .image1 {
+    background-image: url(images/mobile/image-deep-earth.jpg);
+  }
+
+  .thirdSection .grid div .image2 {
+    background-image: url(images/mobile/image-night-arcade.jpg);
+  }
+
+  .thirdSection .grid div .image3 {
+    background-image: url(images/mobile/image-soccer-team.jpg);
+  }
+
+  .thirdSection .grid div .image4 {
+    background-image: url(images/mobile/image-grid.jpg);
+  }
+
+  .thirdSection .grid div .image5 {
+    background-image: url(images/mobile/image-from-above.jpg);
+  }
+
+  .thirdSection .grid div .image6 {
+    background-image: url(images/mobile/image-pocket-borealis.jpg);
+  }
+
+  .thirdSection .grid div .image7 {
+    background-image: url(images/mobile/image-curiosity.jpg);
+  }
+
+  .thirdSection .grid div .image8 {
+    background-image: url(images/mobile/image-fisheye.jpg);
+  }
+
+  .thirdSection .elm1 a {
+    display: none;
+  }
+
+  footer {
+    padding: 20px;
+    align-items: center;
+  }
+
+  footer .bloc1 {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  footer .bloc2 {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
